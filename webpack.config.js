@@ -19,23 +19,6 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(js|mjs|jsx|ts|tsx)$/,
-        exclude: /node_modules/,
-        use: {
-          loader: 'babel-loader',
-          options: {
-            presets: [
-              ['@babel/preset-env', { targets: 'defaults' }],
-              ['@babel/preset-react'],
-            ],
-          },
-        },
-      },
-    ],
-  },
-  module: {
-    rules: [
-      {
         test: /\.css$/i,
         use: ['style-loader', 'css-loader'],
       },
@@ -47,7 +30,21 @@ module.exports = {
         test: /\.(woff|woff2|eot|ttf|otf)$/i,
         type: 'asset/resource',
       },
+      {
+        test: /\.(js|mjs|jsx|ts|tsx)$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: [
+              ['@babel/preset-env', { targets: 'defaults' }],
+              ['@babel/preset-react', { runtime: 'automatic' }],
+            ],
+          },
+        },
+      },
     ],
   },
   mode: 'development',
+  devtool: 'eval-source-map',
 };
