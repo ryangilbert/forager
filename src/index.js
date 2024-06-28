@@ -11,7 +11,7 @@ import { createRoot } from 'react-dom/client';
 //   const btn = document.createElement('button');
 
 //   // Lodash, now imported by this script
-//   element.innerHTML = _.join(['Hello', 'webpack'], ' ');
+//   element.innerHTML = _.join(['Hello', 'webpack and Ryan'], ' ');
 //   element.classList.add('hello');
 //   btn.innerHTML = 'Click me and check the console!';
 //   btn.onclick = printMe;
@@ -31,10 +31,10 @@ import { createRoot } from 'react-dom/client';
 
 // from React tutorial
 
-// // Clear the existing HTML content
+// Clear the existing HTML content
 document.body.innerHTML = '<div id="app"></div>';
 
 // // Render your React component instead
 const root = createRoot(document.getElementById('app'));
 // console.log('..............HELLO....................');
-root.render(<h1>Hello, from React</h1>);
+root.render(<h1>Hello, from React and Ryan</h1>);

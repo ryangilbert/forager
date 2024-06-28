@@ -4,6 +4,6 @@
 
 `npm run build`
 
-### Start server
+### Start webpack-dev-server
 
-`npm run start`
+`npm start`
