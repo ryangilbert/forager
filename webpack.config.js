@@ -1,11 +1,12 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const Dotenv = require('dotenv-webpack');
 
 module.exports = {
   mode: 'development',
   entry: {
-    index: './src/index.js',
-    print: './src/print.js',
+    index: './src/client/index.js',
+    print: './src/client/print.js',
   },
   devtool: 'inline-source-map',
   devServer: {
@@ -15,6 +16,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: 'Development',
     }),
+    new Dotenv(),
   ],
   output: {
     filename: '[name].bundle.js',
