@@ -31,7 +31,7 @@ const RestroomList = ({ latitude, longitude }) => {
     console.log(restroomList[0]);
     restroomComponent = restroomList.map((restroom, index) => {
       return (
-        <div id="location" key={index}>
+        <div className="location" key={index}>
           <h3>{restroom.name}</h3>
           <div>{restroom.street}</div>
           <div>
@@ -45,10 +45,10 @@ const RestroomList = ({ latitude, longitude }) => {
     });
     // restroomComponent = <div>{restroomList[0].name}</div>;
   } else {
-    restroomComponent = 'No restrooms found';
+    restroomComponent = 'Waiting for search results';
   }
 
-  return <div>{restroomComponent}</div>;
+  return <div className="locations-container">{restroomComponent}</div>;
 };
 
 export default RestroomList;

@@ -1,4 +1,39 @@
-.location {
-  color: red;
-  background: url('./leaf.jpeg');
+/* Coolor palette */
+/* CSS HEX */
+/* --african-violet: #9f87afff;
+--plum: #88527fff;
+--coral: #ef8354ff;
+--nyanza: #f3ffe1ff;
+--nyanza-2: #dfffd6ff; */
+
+/* CSS HSL */
+/* --african-violet: hsla(276, 20%, 61%, 1);
+--plum: hsla(310, 25%, 43%, 1);
+--coral: hsla(18, 83%, 63%, 1);
+--nyanza: hsla(84, 100%, 94%, 1);
+--nyanza-2: hsla(107, 100%, 92%, 1); */
+
+body {
+  background-color: white;
+  color: black;
+  padding: 40px;
+  font-family: Arial;
+  text-align: center;
+  justify-content: space-around;
+}
+
+body .location {
+  width: 30%;
+  border-radius: 12px;
+  margin: 0.5em;
+  padding: 10px 10px 10px 10px;
+  background-color: #dfffd6ff;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+
+body .locations-container {
+  display: flex;
+  flex-direction: column;
 }
